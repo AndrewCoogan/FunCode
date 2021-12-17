@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://floodlandbrewing.vinespring.site/#/account/allocations -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="./Floodland W Allocaion_files/flexboxgrid.min.css">
+    <link rel="stylesheet" href="./Floodland W Allocaion_files/icon">
+    <script src="./Floodland W Allocaion_files/polyfill.min.js"></script>
+    <script src="./Floodland W Allocaion_files/remarkable.min.js"></script>
+    <script src="./Floodland W Allocaion_files/mustache.min.js"></script>
+    <script>
+      var ie = (navigator.userAgent.indexOf('MSIE') !== -1)
+      if (ie) {
+        var msg = 'You are using an outdated version of Internet Explorer. As of January 12, 2016, Microsoft recommends upgrading to Edge for a faster and safer web experience. For your security and the best possible experience on our site, please upgrade your current browser. \n\nIf this is not possible, please use a newer browser on a different device.'
+        window.alert(msg)
+        window.location.href = 'https://www.microsoft.com/en-us/windowsforbusiness/end-of-ie-support'
+      }
+    </script>
+    <style>
+      html, body, #app, #app > div {
+        height: 100%;
+        min-height: 100%;
+        overflow: 'visible'
+      }
+      html, body, div, span, a, p, input, label, textarea, button, h1, h2, h3, h4, h5, h6, ul, li, select, table, tr, td, th, thead, tbody, pre, ul {
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      input, select {
+        outline: none
+      }
+      a, button {
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .ac {
+        text-align: center;
+      }
+      .ar {
+        text-align: right;
+      }
+      .fe {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .fc {
+        display: flex;
+        justify-content: center;
+      }
+      .ripple{position:relative;overflow:hidden;transform:translate3d(0,0,0)}.ripple:after{content:"";display:block;position:absolute;width:100%;height:100%;top:0;left:0;pointer-events:none;background-image:radial-gradient(circle,#000 10%,transparent 10.01%);background-repeat:no-repeat;background-position:50%;transform:scale(10,10);opacity:0;transition:transform .5s,opacity 1s}.ripple:active:after{transform:scale(0,0);opacity:.2;transition:0s}
+      .pad {
+        padding: 1rem;
+      }
+      .pad2 {
+        padding: 2rem;
+      }
+      .flex {
+        display: flex;
+      }
+      .baseline {
+        margin-bottom: 2rem;
+      }
+      .baseline2 {
+        margin-bottom: 3rem;
+      }
+      .ac {
+        text-align: center;
+      }
+      @media only screen and (min-width: 1px) and (max-width: 767px) {
+        .center-xs {
+          justify-content: center;
+        }
+        .hide-xs {
+          display: none !important;
+        }
+        .pad-xs {
+          padding: 1rem;
+        }
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .hide-sm {
+          display: none !important;
+        }
+        .pad-sm {
+          padding: 1rem;
+        }
+      }
+      @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+        .hide-md {
+          display: none !important;
+        }
+        .pad-md {
+          padding: 1rem;
+        }
+      }
+      @media only screen and (min-width: 1200px) {
+        .hide-lg {
+          display: none !important;
+        }
+        .pad-lg {
+          padding: 1rem;
+        }
+      }
+    </style>
+    <title>Floodland</title>
+  <style data-jss="" data-meta="MuiTable">
+.jss55 {
+  width: 100%;
+  display: table;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+</style><style data-jss="" data-meta="MuiTableBody">
+.jss74 {
+  display: table-row-group;
+}
+</style><style data-jss="" data-meta="MuiTableCell">
+.jss62 {
+  display: table-cell;
+  padding: 4px 56px 4px 24px;
+  text-align: left;
+  border-bottom: 1px solid
+    rgba(224, 224, 224, 1);
+  vertical-align: inherit;
+}
+.jss62:last-child {
+  padding-right: 24px;
+}
+.jss63 {
+  color: #000000;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.jss64 {
+  color: #000000;
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+.jss65 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.75rem;
+  border-bottom: 0;
+}
+.jss66 {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+.jss67 {
+  padding-right: 24px;
+}
+.jss68 {
+  padding: 0 12px;
+}
+.jss68:last-child {
+  padding-right: 12px;
+}
+.jss69 {
+  padding: 0;
+}
+.jss69:last-child {
+  padding: 0;
+}
+.jss70 {
+  text-align: left;
+}
+.jss71 {
+  text-align: center;
+}
+.jss72 {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+.jss73 {
+  text-align: justify;
+}
+</style><style data-jss="" data-meta="MuiTableHead">
+.jss56 {
+  display: table-header-group;
+}
+</style><style data-jss="" data-meta="MuiTableRow">
+.jss57 {
+  color: inherit;
+  height: 48px;
+  display: table-row;
+  outline: none;
+  vertical-align: middle;
+}
+.jss57.jss58 {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.jss57.jss59:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+.jss60 {
+  height: 56px;
+}
+.jss61 {
+  height: 56px;
+}
+</style><style data-jss="" data-meta="t, Unthemed, Static">
+.c0137 {
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.c0138 {
+  color: rgb(120,120,120);
+  display: flex;
+  padding: .25rem 0;
+  font-size: .9rem;
+  align-items: center;
+}
+.c0139 {
+  color: silver;
+  display: block;
+  font-size: .8rem;
+  margin-top: .5rem;
+}
+</style><style data-jss="" data-meta="t, Unthemed, Static">
+.c0140 {
+  margin-bottom: 1rem;
+}
+.c0140.nomargin {
+  margin-bottom: 0;
+}
+</style><style data-jss="" data-meta="t, Unthemed, Static">
+.c0141 {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem;
+  font-size: 14px;
+  min-width: 125px;
+  text-align: center;
+  transition: opacity .25s;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.c0141:hover {
+  opacity: 0.8;
+}
+.c0141.raised {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="" data-meta="t, Unthemed, Static">
+.c0136 {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: .8rem;
+  appearance: none;
+  transition: all .25s;
+  border-radius: 2px;
+  -moz-appearance: none;
+  background-color: white;
+  -webkit-appearance: none;
+}
+.c0136:focus {
+  background-color: #efefef;
+}
+.c0136.disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+</style><style data-jss="" data-meta="t, Unthemed, Static">
+.c0135 {
+  cursor: pointer;
+  transition: filter .25s;
+  font-weight: 300;
+}
+.c0135:hover {
+  filter: brightness(85%);
+}
+.c0135.block {
+  display: block;
+}
+.c0135.small {
+  font-size: 14px;
+}
+</style><style data-jss="" data-meta="t, Unthemed, Static">
+
+</style><style data-jss="" data-meta="t, Unthemed, Static">
+.c0133 {
+  white-space: pre-line;
+  margin-bottom: 2rem;
+}
+.c0133.bold {
+  font-weight: bold;
+}
+.c0133.error {
+  color: red;
+}
+.c0133.header {
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+.c0133.line {
+  margin-bottom: 0;
+}
+.c0133.inline {
+  display: inline;
+}
+.c0133.caption {
+  opacity: 0.68;
+  font-size: .9rem;
+}
+.c0133.subHeader {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.c0133.italic {
+  font-style: italic;
+}
+.c0133.sectionHeader {
+  color: silver;
+  font-size: 11px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.c0133.warning {
+  color: orange;
+}
+.c0134 {
+  width: 100%;
+  height: 1px;
+  margin: 2rem 0;
+  background: #e2e2e2;
+}
+</style><style data-jss="" data-meta="t, Unthemed, Static">
+.c0111 {
+  margin-bottom: 2rem;
+}
+.c0112 {
+  text-align: center;
+}
+.c0112 label {
+  margin-bottom: 0;
+}
+.c0113 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: .25rem;
+}
+.c0114 {
+  border: 1px solid rgb(150,150,150);
+  display: inline-block;
+  padding: .5rem 1rem;
+  opacity: 1;
+  font-size: 14px;
+  background: rgb(245,245,245);
+  text-align: center;
+  font-weight: 400;
+  margin-right: 1rem;
+  border-width: 2px;
+  margin-bottom: 1rem;
+}
+.c0115 {
+  margin-top: 4rem;
+  text-align: center;
+}
+.c0116 {
+  color: gray;
+  width: 100%;
+  text-align: center;
+}
+.c0117 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.c0118 {
+  font-size: 18px;
+  margin-top: 2rem;
+}
+.c0119 {
+  text-align: left;
+}
+.c0120 {
+  display: flex;
+  padding: 2rem;
+  position: relative;
+  background-color: white;
+}
+@media only screen and (max-width: 768px) {
+  .c0120 {
+    flex-wrap: wrap;
+  }
+}
+.c0121 {
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  position: absolute;
+}
+.c0122 {
+  font-size: 1rem;
+}
+.c0123 {
+  max-width: 500px;
+}
+.c0124 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.c0124 > img {
+  width: 100%;
+  max-width: 300px;
+  max-height: 425px;
+}
+@media only screen and (min-width: 768px) {
+  .c0124 {
+    margin: 0 2rem 0 0;
+  }
+}
+.c0125 {
+  height: 100px;
+  max-width: 200px;
+}
+@media only screen and (max-width:600px) {
+  .c0125 {
+    max-width: 100px;
+  }
+}
+@media only screen and (max-width:600px) {
+  .c0126 > tbody > tr > td {
+    padding: 4px 12px 4px 12px;
+  }
+  .c0126 > thead > tr > th {
+    padding: 4px 12px 4px 12px;
+  }
+}
+.c0127 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .c0127 {
+    text-align: left;
+  }
+}
+.c0128 {
+  font-size: 13px !important;
+  margin-top: .5rem;
+}
+.c0129 {
+  margin-top: 2rem;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 1rem;
+}
+.c0130 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.c0131 {
+  margin: 1rem 0;
+}
+</style><style data-jss="" data-meta="t, Unthemed, Static">
+.c011 {
+  display: flex;
+  text-align: center;
+  min-height: 320px;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1024px) {
+  .c011 {
+    text-align: left;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.c012 {
+  margin: 2rem 0;
+  max-width: 300px;
+}
+@media only screen and (min-width: 1024px) {
+  .c012 {
+    margin: 6rem 4rem;
+  }
+}
+.c012 * {
+  display: block;
+}
+.c013 {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.c013 a {
+  color: #787878;
+  text-decoration: none;
+}
+.c014 {
+  color: white;
+  display: flex;
+  padding: 2rem;
+  font-size: 1.4rem;
+  justify-content: center;
+}
+@media only screen and (min-width: 1024px) {
+  .c014 {
+    width: 724px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .c014 {
+    width: 850px;
+  }
+}
+.c014 > img {
+  max-width: 350px;
+  max-height: 125px;
+}
+.c014 > a > img {
+  max-width: 350px;
+  max-height: 125px;
+}
+.c015 {
+  width: 100%;
+}
+.c016 {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  .c016 {
+    width: 724px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .c016 {
+    width: 850px;
+  }
+}
+.c017 {
+  width: 925px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  max-width: 100%;
+  min-height: 60%;
+}
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .c017 {
+    padding: 2rem 1rem;
+  }
+}
+.c018 {
+  color: #505050;
+  display: flex;
+  transition: opacity .25s;
+  justify-content: center;
+}
+.c018 > a {
+  padding: 1rem 2rem;
+}
+.c018 > a:hover {
+  opacity: 0.6;
+}
+.c019 {
+  width: 150px;
+  padding: 0 1rem;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 720px) {
+  .c019 {
+    left: 1rem;
+    width: auto;
+    position: absolute;
+  }
+}
+.c0110 {
+  width: 150px;
+  padding: 0 1rem;
+}
+.c0110 > a {
+  white-space: nowrap;
+}
+@media only screen and (max-width: 720px) {
+  .c0110 {
+    right: 1rem;
+    width: auto;
+    position: absolute;
+  }
+}
+.c0110 > a:first-child {
+  margin-right: 2rem;
+}
+</style><link id="dynamic-favicon" type="image/png" rel="icon" href="https://floodlandbrewing.vinespring.site/storefront/floodlandbrewing.vinespring.site/favicon.png"><script type="text/javascript" charset="UTF-8" src="./Floodland W Allocaion_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./Floodland W Allocaion_files/util.js"></script></head>
+  <body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="">
+    <div id="app" style=""><header class="c013" style="background: rgb(27, 27, 36);"><span class="c019" style="bottom: 0.5rem;"><a data-cy="allocations" tabindex="0" role="button" style="font-size: min(16px, 6.8vw); color: rgb(255, 255, 255); font-weight: normal; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">Allocations</a></span><div class="c014"><a data-cy="" tabindex="0" role="button"><img src="./Floodland W Allocaion_files/logo.png" alt="Floodland"></a></div><span class="c0110" style="bottom: 0.5rem;"><a data-cy="account" tabindex="0" role="button" style="font-size: min(16px, 6.8vw); color: rgb(255, 255, 255); font-weight: normal; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">Account</a><a data-cy="cart" tabindex="0" role="button" style="font-size: min(16px, 6.8vw); color: rgb(255, 255, 255); font-weight: normal; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">Cart</a></span></header><div><main class="c015" style="background-color: rgb(255, 255, 255);"><div class="c017" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; color: rgb(0, 0, 0);"><div><div><div data-cy="allocations" class="c0133 header  c0117" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; color: rgb(0, 0, 0);">Allocations<div class="c0134" hr="true"></div></div><div><div class="c0111"><div data-cy="november-2020-public-sale" class="c0133 line subHeader  ">November 2020 Public Sale</div><div data-cy="open-until-11/30/2020" class="c0133 line italic caption  ">Open until 11/30/2020</div><div data-cy="hello." class="c0133 body  c0131">HELLO.</div><hr style="margin: 15px 0px;"><table class="jss55 c0126"><thead class="jss56"><tr class="jss57 jss60"><th class="jss62 jss63 jss67" scope="col" width="300">Item</th><th class="jss62 jss63 jss67 c0112" scope="col" width="300"><p>Product Info</p><a data-cy="hide" class="c0135" tabindex="0" role="button" style="color: rgb(102, 102, 102);">hide</a></th><th class="jss62 jss63 jss67" scope="col">Price*</th><th class="jss62 jss63 jss67 c0112" scope="col" width="150"><p>Allocated</p><a data-cy="remove-all" class="c0135" tabindex="0" role="button" style="color: rgb(102, 102, 102);">remove all</a></th><th class="jss62 jss63 jss67 c0112" scope="col" width="120"><p>Additional - If Avail.</p></th></tr></thead><tbody class="jss74"><tr class="jss57"><td class="jss62 jss64 jss67 c0122" scope="sku">November 2020 Public 2-pack</td><td class="jss62 jss64 jss67 c0112"><a data-cy="" tabindex="0" role="button"><img class="c0125" src="./Floodland W Allocaion_files/public_preview.jpg"></a></td><td class="jss62 jss64 jss67">$56.00</td><td class="jss62 jss64 jss67 c0112"><label class="c0137"><div><select data-cy="product-quantity-select" class="c0136  c0119"><option data-cy="select-option-0">0</option><option data-cy="select-option-1">1</option></select></div></label></td><td class="jss62 jss64 jss67 c0112"></td></tr></tbody></table></div></div><div class="row c0140  c0115"><div class="col-xs-12 "><a data-cy="add-selected-items-to-cart" class="c0141 ripple" tabindex="0" role="button" style="background: rgb(102, 102, 102); color: white;">Add Selected Items to Cart</a></div></div></div></div></div></main><footer class="c011" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; background-color: rgb(230, 230, 230);"><span class="c012"><b style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; color: rgb(0, 0, 0);">Contact Us</b><a data-cy="info@floodlandbrewing.com" tabindex="0" role="button" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; color: rgb(102, 102, 102);">info@floodlandbrewing.com</a><a data-cy="-" tabindex="0" role="button" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; color: rgb(102, 102, 102);"> </a></span></footer></div></div>
+    <script src="./Floodland W Allocaion_files/saved_resource"></script>
+    <script src="./Floodland W Allocaion_files/js" async=""></script>
+    <script src="./Floodland W Allocaion_files/bundle.js"></script>
+    <script type="text/javascript" src="./Floodland W Allocaion_files/loggly-2.2.3.min.js" async=""></script>
+    <script>
+      var _LTracker = window._LTracker || []
+      _LTracker.push({
+        'logglyKey': '1bd93a73-3a91-44ba-a255-79483b4b0c60',
+        'sendConsoleErrors': true,
+        'tag': 'v3,storefront'
+      })
+    </script>
+    <noscript>
+     For full functionality of this site it is necessary to enable JavaScript.
+     Here are <a href="https://www.enable-javascript.com/" target="_blank">
+     instructions how to enable JavaScript in your web browser</a>.
+    </noscript>
+  
+
+<iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeMetricsController0720" allowpaymentrequest="true" src="./Floodland W Allocaion_files/m-outer-26f06e6dfafc73ef8d70171c2397785d.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body></html>
